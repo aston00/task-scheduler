@@ -1,0 +1,391 @@
+    /* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    /* Global */
+body {
+    font: 16px/1.5 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #333333;
+}
+
+    /* Global */
+li {
+    list-style: none;
+}
+
+    /* Root container*/
+.container {
+    width: 50%;
+    margin: auto;
+    background-color: white; 
+    min-height: 800px;
+    margin-top: 30px;
+    border-radius: 20px;
+    
+}
+    /* AppContainer */
+.innerContainer {
+    width: 80%;
+    min-height: inherit;
+    margin: auto;
+    background: inherit;
+    /* background-color: white; */
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+    /* App heading */
+#heading {
+    display: block;
+    color: #1E90FF;
+    padding: 30px 0 10px 0;
+    font-size: 3em;
+    text-decoration: underline;
+    text-decoration-color: #1E90FF;
+    text-align: center;
+    letter-spacing: 1px;
+}
+    /* Container for adding new task / error displaying*/
+.formContainer {
+    padding-bottom: 20px;  
+    border: 2px solid lightgrey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+    
+    /* Add task form / rename task form */
+#form , #formRename{
+    display: block;
+    width: 100%;
+}
+
+    /* Add task Form label*/
+#form label {
+    color: #333333;
+    display: block;
+    font-size: 2rem;
+    padding: 15px 0 0 0 ;
+    text-align: center;
+}
+
+    /* Input for adding new tasks*/
+#input  {
+    display: block;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    outline: none;
+    padding: 7px;
+    border-style: double;
+    border-width: 0 0 3px 0;
+    border-color: #1ebfff;
+    font-style: italic;
+}
+    /* Button for adding task to the list*/
+#addTask {
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    padding: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #1E90FF;
+}
+#addTask:hover , #submitRename:hover{
+    background-color: #1ebfff;
+    cursor: pointer;
+}
+#addTask:active {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+    /* Error container */
+#errorDisplay2 {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+    /* Error message */
+#errorDisplay2 > h2 {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px;
+    margin: 0;
+    background-color: white;
+}
+
+    /*Container for list */
+.listContainer {
+    display: block;
+    margin: auto;
+    border: 2px solid lightgrey;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 50px;
+}
+    /* List(ul) container */
+#mainList {
+    margin: 5px 20px 0 20px;
+}
+
+    /* Heading for list*/
+#listHeading {
+    font-size: 2rem;
+    text-align: center;
+    color: #1E90FF;
+    text-decoration: underline;
+    text-decoration-color: rgb(45, 181, 223);
+}
+    /* Dynamic list items */
+.listItem {
+    width: 85%;
+    margin: auto;
+    overflow: auto;
+    display: block;
+    font-size: 1.3rem;
+    padding: 5px 10px 5px 15px;
+    background-color: azure;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgrey;
+}
+.listItem:hover {
+    cursor: pointer;
+}
+    /* First childof list */
+.listItem:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+    /* Last childof list */
+.listItem:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+    /* Remove item from the list icon*/
+.listItem a {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: .6;
+}
+
+.listItem a:hover {
+    opacity: 1;
+}
+
+    /* Container for renaming form */
+.inputRenameContainer {
+    display: none;
+    margin-top: 10px;
+    margin: auto;
+}
+
+    /* Rename form */
+#formRename{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+/* Rename input container */
+#renameInputContainer {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+    /* Rename input */
+#inputRename {
+    display: block;
+    font-style: italic;
+    border-style: solid;
+    border-width: 0 0 4px 0;
+    border-color: #1ebfff; 
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    outline: none;
+    padding: 7px;
+    border-style: double;
+    border-width: 0 0 3px 0;
+    border-color: #1ebfff;
+}
+
+    /*Container for rename and cancel buttons */
+.renameBtnContainer{
+    width: 80%;
+    margin: auto;
+}
+
+    /* Submit rename form button */
+#submitRename{
+    display: block;
+    width: 40%;
+    float: left;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    padding: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #1E90FF;
+}
+
+    /* Cancel rename button */
+#cancelRename {
+    display: block;
+    width: 40%;
+    float: right;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    padding: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgb(255, 30, 60);
+}
+#cancelRename:hover {
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+
+    /* Error container */
+#errorDisplay {
+    display: block;
+    width: 80%;
+    margin: auto;
+    
+}
+    /* Error message in rename container */
+#errorDisplay h2 {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px;
+    margin: 0;
+    background-color: white;
+    
+}
+
+
+    /* Horizontal rule*/
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    background-color: #333333;
+    height: 3px;
+    margin: 2rem auto 1rem auto;
+}
+
+    /* Filter container */
+.filterClear {
+    padding:0;
+    width: 100%;
+    margin: auto;
+}
+
+    /* Label for filter input */
+.filterClear label {
+    font-size: 2rem;
+    text-align: center;
+    display:block;
+    color: #333333;
+}
+
+    /* Filter input */
+.filterClear input {
+    font-style: italic;
+    display: block;
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    outline: none;
+    padding: 7px;
+    border-style: double;
+    border-width: 0 0 3px 0;
+    border-color:#1ebfff;
+    
+}
+
+/* Clear button(remove all tasks from localStorage */
+.filterClear a {
+    text-decoration: none;
+    display: block;
+    width: 60%;
+    margin: auto;
+    font-size: 15px;
+    outline: none;
+    padding: 7px;
+    margin-top: 15px;
+    color: #ffffff;
+    background-color: #1E90FF;
+    border: 1px solid grey;
+    text-align: center;
+    text-transform: upperCase;
+    letter-spacing: 1px;
+}
+.filterClear a:link {
+    color: #ffffff;
+    background-color: #1E90FF;
+}
+.filterClear a:visited {
+    color: #ffffff;
+    background-color: #1E90FF;
+}
+.filterClear a:hover {
+    font-weight: bold;
+    background-color: #1ebfff;
+}
+
+.filterClear a:active {
+    letter-spacing: 0.1em;
+}
+
+
+    /* Responsive */
+@media screen and (max-width: 1500px){
+    .container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .container {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 900px){
+    .container {
+        width: 95%;
+    }
+    .innerContainer {
+        width: 95%;
+    }
+} 

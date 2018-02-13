@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events scheduler</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="list.css">
+</head>
+
+<body>
+    <!-- Root container -->
+    <div class="container">
+        <div class="innerContainer">
+            <h2 id="heading">Tasks scheduler</h2>
+            <!-- Container for adding list items -->
+            <div class="formContainer">
+                <!-- Form for adding list items -->
+                <form id="form">
+                    <label for="input">Enter new task</label>
+                    <br>
+                    <input type="text" name="task" id="input" autocomplete="off" placeholder="Enter here..." >
+                    <input type="submit" value="Add task" id="addTask">
+                </form>
+                <!-- Error display container -->
+                <div id="errorDisplay2" style="display: none;">
+                    <h2>This task already exists</h2>
+                </div>
+            </div>
+
+            <div class="listContainer">
+                <h2 id="listHeading">List of tasks:</h2>
+                <!-- Dynamic list items container -->
+                <ul id="mainList"></ul>
+
+                <!-- Rename container -->
+                <div class="inputRenameContainer">
+                    <form id="formRename">
+                        <div id="renameInputContainer">
+                            <input type="text" name="renameText" id="inputRename" placeholder="Enter new value here..." autocomplete="off">
+                        </div>
+                        <!-- Error display container -->
+                        <div id="errorDisplay" style="display: none;">
+                            <h2>This task already exists</h2>
+                        </div>
+                        <!-- Rename button and cancel button container -->
+                        <div class="renameBtnContainer">
+                            <input type="submit" id="submitRename" value="Rename">
+                            <input type="button" id="cancelRename" value="Cancel">
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+                
+                <!-- Filter container -->
+                <div class="filterClear">
+                    <label for="filter">Filter:</label>
+                    <br>
+                    <input type="text" name="filter" id="filter" placeholder="Enter here..." maxlength="30">
+                    <a id="clear" href="#">Clear list</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Script files -->
+    <script type="text/javascript" src="list.js"></script>
+</body>
+
+</html>
